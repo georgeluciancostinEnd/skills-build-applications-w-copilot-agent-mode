@@ -1,3 +1,54 @@
+.app-shell {
+  width: min(1180px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 32px;
+  background: #f8f7f2;
+  color: #17211b;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid #d9ded7;
+}
+
+.brand, nav a, .primary-link, .text-link { text-decoration: none; }
+.brand { color: #17211b; font-weight: 800; letter-spacing: 1px; }
+.brand span { color: #d4572a; }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { color: #667168; font-size: 0.85rem; font-weight: 700; }
+nav a.active, nav a:hover { color: #d4572a; }
+
+main { min-height: calc(100vh - 150px); }
+.overview, .collection { padding: 88px 0 64px; }
+.overview { max-width: 760px; }
+.eyebrow { color: #d4572a; font-size: 0.72rem; font-weight: 800; letter-spacing: 2px; }
+h1 { margin: 16px 0 18px; color: #17211b; font-size: clamp(2.8rem, 7vw, 6rem); line-height: 0.98; }
+.collection h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
+.lead { max-width: 600px; color: #667168; font-size: 1.1rem; }
+.overview-links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 36px; }
+.primary-link { padding: 13px 18px; background: #17211b; color: #fff; font-weight: 700; }
+.text-link { color: #d4572a; font-weight: 700; }
+.config-note { margin-top: 18px; padding: 12px 14px; border-left: 3px solid #d4572a; background: #fff1e9; color: #6c493a; font-size: 0.85rem; }
+.data-list { margin-top: 38px; border-top: 1px solid #d9ded7; }
+.data-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap: 18px; align-items: center; padding: 20px 0; border-bottom: 1px solid #d9ded7; }
+.data-row span { color: #667168; }
+.data-row b { color: #d4572a; }
+.rank { font-size: 1.5rem; }
+.error { margin-top: 32px; color: #b42318; }
+footer { padding: 24px 0; color: #8a938c; font-size: 0.75rem; }
+
+@media (max-width: 720px) {
+  .app-shell { padding: 0 18px; }
+  .app-header { align-items: flex-start; flex-direction: column; }
+  .overview, .collection { padding-top: 56px; }
+  .data-row { grid-template-columns: 1fr auto; gap: 8px 14px; }
+  .data-row span { font-size: 0.9rem; }
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
