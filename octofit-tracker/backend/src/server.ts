@@ -35,6 +35,7 @@ app.get('/api/workouts/', async (_request, response) => {
   response.json(await Workout.find().lean());
 });
 
+
 app.listen(port, () => {
   console.log(`OctoFit API listening on ${apiBaseUrl}`);
 });
