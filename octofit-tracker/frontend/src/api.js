@@ -15,7 +15,8 @@ export function getItems(payload) {
 }
 
 export async function fetchItems(resource) {
-  const response = await fetch(`${apiBaseUrl}/${resource}/`);
+  const endpoint = resource.startsWith('http') ? resource : `${apiBaseUrl}/${resource}/`;
+  const response = await fetch(endpoint);
   if (!response.ok) throw new Error(`Unable to load ${resource}`);
   return getItems(await response.json());
 }
